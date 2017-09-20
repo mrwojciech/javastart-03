@@ -1,17 +1,23 @@
 package Televisior;
 
 public class Television {
-    String status;
+    status tvStatus;
+
+    enum status {
+        ON, OFF;
+    }
 
 
     void turnOn() {
-        this.status = "ON";
+        this.tvStatus = status.ON;
     }
 
     void turnOff() {
-        this.status = "OFF";
+        this.tvStatus = status.OFF;
     }
-    void showStatus(){
-        System.out.println("The tv is: "+status);
+
+
+    void showStatus() {
+        System.out.println("The tv is: " + tvStatus.toString());
     }
 }
