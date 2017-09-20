@@ -23,7 +23,6 @@ public class ShapeTest {
                 shapeCalculator.squareArea(square));
         System.out.println(square.calculateArea());
 
-
         System.out.println(
                 shapeCalculator.trianglePerimeter(triangle));
         System.out.println(triangle.calculatePerimeter());
