@@ -3,28 +3,16 @@ package TimeCalculator;
 public class TimeCalculator {
 
 
-    int changeAndShowAndReturnDaysIntoHours(Day day) {
-        System.out.println(day.convertToHours().getHours());
-        return day.convertToHours().getHours();
+    public static void main(String[] args) {
+
+        TimeCalculator timeCalculator = new TimeCalculator();
+
+        Time time = new Time();
+        System.out.println(time.toSeconds(1,1,1,1));
+        System.out.println(time.toHours(1,0,0,0));
+        System.out.println(time.toMinutes(1,0,0,0));
+
     }
 
-    int changeAndShowAndReturnDaysHoursMinutesSecoundsIntoSecounds(Day day, Hour hour, Minute minutes, Second sec) {
-        int numberOfSec =
-                day.convertToHours().convertToMinutes().convertToSec().getNumber() +
-                        hour.convertToMinutes().convertToSec().getNumber() +
-                        minutes.convertToSec().getNumber() +
-                        sec.getNumber();
-        System.out.println(numberOfSec);
-        return numberOfSec;
-    }
 
-    int changeAndReturnSecoundToMinutes(Second sec) {
-        sec.convertToMinutes(sec);
-        return changeAndReturnSecoundToMinutes(sec.getNumber());
-    }
-
-    public int changeAndReturnSecoundToMinutes(int number) {
-        System.out.println(number / 60);
-        return number / 60;
-    }
 }
